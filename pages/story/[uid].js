@@ -21,7 +21,7 @@ export default function Story({ page, disclaimer, otherStories }) {
       <article>
         <div className="flex flex-col justify-center w-full mx-auto md:max-w-4xl lg:max-w-5xl mx-auto pt-10 pb-6 px-4">
           <Link href="/stories" passHref>
-            <a className="text-black dark:text-white content-bold text-sm uppercase mb-6">
+            <a className="text-black hover:text-[#143e75] dark:hover:text-[#FDE7C9] hover:underline dark:text-white content-bold text-sm uppercase mb-6">
               &larr; Back to Stories
             </a>
           </Link>
@@ -49,8 +49,8 @@ export default function Story({ page, disclaimer, otherStories }) {
           </figure>
         </div>
         <div className="w-full mx-auto max-w-2xl px-1 text-base dark:text-white border-b border-grey-500 py-6 md:py-8 md:pt-14 post-container">
-  <SliceZone slices={page.data.body} components={components} />
-</div>
+          <SliceZone slices={page.data.body} components={components} />
+        </div>
       </article>
 
       <div className="w-full mx-auto max-w-2xl px-1 border-grey-500 md:text-justify disclaimer-container text-base dark:text-white flex flex-col align-center justify-center">

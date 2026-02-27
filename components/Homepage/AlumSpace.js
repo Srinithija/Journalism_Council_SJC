@@ -22,7 +22,7 @@ const AlumspaceHomeCard = ({ item }) => {
               />
             </div>
           )}
-          <h2 className="title text-lg md:text-xl mb-1 hover:text-[#1c2e4a] dark:hover:text-[#FDE7C9] transition-colors">{title}</h2>
+          <h2 className="title text-lg md:text-xl mb-1 hover:text-[#143e75] dark:hover:text-[#FDE7C9] transition-colors">{title}</h2>
           <p className="content-bold text-sm md:text-base">{alum}</p>
           {(batch || department) && (
             <p className="text-xs text-grey-500 mt-1">

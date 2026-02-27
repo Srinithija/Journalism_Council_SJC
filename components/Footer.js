@@ -3,121 +3,118 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="bg-grey-700 text-dominantbg">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-16 pb-6">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-8">
 
-        {/* Top Section */}
-        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-10">
+        {/* Main Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
 
-          {/* Left Section */}
-          <div className="md:w-2/3">
-           <p className="text-lg mb-6">
-            Government College of technology ,Thadagam Road ,Coimbatore-13
+          {/* Column 1 – About + Address */}
+          <div>
+            <h2 className="text-xl font-semibold mb-4 tracking-wide">
+              Student Journalist Council
+            </h2>
+
+            <p className="text-sm leading-relaxed mb-6 opacity-80">
+              SJC - GCT is the official student media body of 
+              Government College of Technology, Coimbatore.
             </p>
-            <p className="text-lg mb-6">
-              Student Journalist Council - GCT is the student media body of GCT, Coimbatore.
-            </p>
 
-            <ul className="flex flex-wrap gap-6 text-sm font-semibold">
-          <li>
-            <Link href="/stories">
-              <a className="hover:underline hover:text-white transition-colors duration-200">
-                Stories
+            <div className="text-sm leading-6 opacity-80">
+              <p>Government College of Technology</p>
+              <p>Thadagam Road</p>
+              <p>Coimbatore - 641013</p>
+
+              <a
+                href="https://goo.gl/maps/NX5hqshxhPgoLzZD9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-3 text-blue-400 hover:text-blue-300 hover:underline transition duration-300"
+              >
+                View on Map →
               </a>
-            </Link>
-          </li>
+            </div>
+          </div>
 
-          <li>
-            <Link href="/aperture">
-              <a className="hover:underline hover:text-white transition-colors duration-200">
-                Aperture
+          {/* Column 2 – Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">
+              Quick Links
+            </h3>
+
+            <ul className="space-y-3 text-sm">
+              {[
+                { name: "Stories", path: "/stories" },
+                { name: "Aperture", path: "/aperture" },
+                { name: "Humans of GCT", path: "/humansofgct" },
+                { name: "AlumSpace", path: "/alumspace" },
+                { name: "About", path: "/about" },
+                { name: "Team", path: "/team" },
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link href={link.path}>
+                    <span className="cursor-pointer hover:text-white hover:pl-1 transition-all duration-200 ease-in-out">
+                      {link.name}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 3 – Social Media */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">
+              Connect With Us
+            </h3>
+
+            <div className="flex gap-4">
+
+              <a
+                href="https://www.facebook.com/sjcgct"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-grey-600 p-3 rounded-lg hover:bg-black transition duration-300"
+              >
+                <img src="/images/facebook.svg" alt="Facebook" className="w-5 h-5" />
               </a>
-            </Link>
-          </li>
 
-          <li>
-            <Link href="/humansofgct">
-              <a className="hover:underline hover:text-white transition-colors duration-200">
-                Humans of GCT
+              <a
+                href="https://www.instagram.com/sjcgct/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-grey-600 p-3 rounded-lg hover:bg-black transition duration-300"
+              >
+                <img src="/images/instagram.svg" alt="Instagram" className="w-5 h-5" />
               </a>
-            </Link>
-          </li>
 
-          <li>
-            <Link href="/alumspace">
-              <a className="hover:underline hover:text-white transition-colors duration-200">
-                AlumSpace
+              <a
+                href="https://www.twitter.com/sjcgct"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-grey-600 p-3 rounded-lg hover:bg-black transition duration-300"
+              >
+                <img src="/images/x.svg" alt="X" className="w-5 h-5" />
               </a>
-            </Link>
-          </li>
 
-          <li>
-            <Link href="/about">
-              <a className="hover:underline hover:text-white transition-colors duration-200">
-                About
+              <a
+                href="https://www.linkedin.com/company/sjcgct"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-grey-600 p-3 rounded-lg hover:bg-black transition duration-300"
+              >
+                <img src="/images/linkedin-svgrepo-com.svg" alt="LinkedIn" className="w-5 h-5" />
               </a>
-            </Link>
-          </li>
 
-          <li>
-            <Link href="/team">
-              <a className="hover:underline hover:text-white transition-colors duration-200">
-                Team
-              </a>
-            </Link>
-          </li>
-        </ul>
-        </div>
-
-          {/* Right Section - Social Icons */}
-          <div className="flex gap-4 md:justify-end">
-
-            <a
-              href="https://www.facebook.com/sjcgct"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-grey-600 p-3 rounded-md hover:bg-grey-500 transition"
-            >
-              <img src="/images/facebook.svg" alt="Facebook" className="w-5 h-5" />
-            </a>
-
-            <a
-              href="https://www.instagram.com/sjcgct/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-grey-600 p-3 rounded-md hover:bg-grey-500 transition"
-            >
-              <img src="/images/instagram.svg" alt="Instagram" className="w-5 h-5" />
-            </a>
-
-            <a
-              href="https://www.twitter.com/sjcgct"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-grey-600 p-3 rounded-md hover:bg-grey-500 transition"
-            >
-              <img src="/images/x.svg" alt="Twitter / X" className="w-5 h-5" />
-            </a>
-
-            <a
-              href="https://www.linkedin.com/company/sjcgct"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-grey-600 p-3 rounded-md hover:bg-grey-500 transition"
-            >
-              <img src="\images\linkedin-svgrepo-com.svg" alt="LinkedIn" className="w-5 h-5" />
-            </a>
-
+            </div>
           </div>
         </div>
 
         {/* Divider */}
-        <hr className="border-grey-500 my-8" />
+        <hr className="border-grey-500 my-10" />
 
-        {/* Bottom Section */}
-        <div className="text-sm text-grey-400 flex justify-between items-center flex-col md:flex-row gap-4">
-          <p>
-            © {new Date().getFullYear()} Student Journalist Council - GCT. All rights reserved.
-          </p>
+        {/* Bottom Copyright */}
+        <div className="text-center text-sm opacity-70">
+          © {new Date().getFullYear()} Student Journalist Council - GCT. All rights reserved.
         </div>
 
       </div>

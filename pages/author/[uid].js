@@ -19,7 +19,7 @@ export default function AuthorPage({ author, stories }) {
     <Canvas bgcolor="white">
       <div className="max-w-4xl mx-auto px-6 py-10">
         <Link href="/stories" passHref>
-          <a className="text-base content-bold text-sm uppercase mb-6 inline-block hover:text-[#1c2e4a] transition-colors hover:underline">
+          <a className="text-base content-bold text-sm uppercase mb-6 inline-block hover:text-[#143e75] transition-colors hover:underline">
             &larr; Back to Stories
           </a>
         </Link>
@@ -69,7 +69,7 @@ export default function AuthorPage({ author, stories }) {
                     </span>
                     <Link href={`/story/${story.uid}`} passHref>
                       <a>
-                        <h3 className="title text-base md:text-xl mb-1 hover:text-[#1c2e4a] transition-colors">
+                        <h3 className="title text-base md:text-xl mb-1 hover:text-[#143e75] transition-colors">
                           {story.data.title[0]?.text}
                         </h3>
                       </a>
@@ -93,7 +93,7 @@ export default function AuthorPage({ author, stories }) {
         {/* Back Link */}
         <div className="mt-10 pt-6 border-t border-grey-300">
           <Link href="/stories" passHref>
-            <a className="text-base content-bold text-sm uppercase hover:text-[#1c2e4a] transition-colors hover:underline">
+            <a className="text-base content-bold text-sm uppercase hover:text-[#143e75] transition-colors hover:underline">
               &larr; Back to Stories
             </a>
           </Link>

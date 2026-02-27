@@ -385,7 +385,7 @@ a {
 }
 
 .post-container blockquote {
-  background-color: #e1dcd5;
+  background-color: #d7d4d0;
   border-radius: 0px 0.5rem 0.5rem 0px;
   border-left: 0.5rem solid #7673e6;
   padding: 1.5rem 3.5rem 0.75rem 4rem;
@@ -394,10 +394,10 @@ a {
 
 .post-container blockquote p {
   display: block;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   line-height: 2.25rem;
-  background-color: #e1dcd5;
-  font-family: "Lato";
+  background-color: #d7d4d0;
+  font-family: "Playfair Display";
   font-style: italic;
   font-weight: 400;
   letter-spacing: 0.03em;
@@ -406,7 +406,7 @@ a {
 }
 
 .post-container blockquote p:last-child {
-  font-style: normal;
+  font-style: italic;
   font-family: "Playfair Display";
   font-weight: 400;
   font-size: 1.1rem;

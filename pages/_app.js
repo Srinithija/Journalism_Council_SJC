@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import Layout from "../components/Layout";
+import { appWithTranslation } from 'next-i18next';
 import ThemeToggle from "../components/ThemeToggle";
 
 function MyApp({ Component, pageProps }) {
@@ -13,4 +14,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);

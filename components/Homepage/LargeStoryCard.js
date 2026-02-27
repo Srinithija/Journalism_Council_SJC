@@ -20,7 +20,7 @@ const LargeStoryCard = ({ story }) => {
       <div className="heading-container py-2">
         <Link href={linkResolver(story)} passHref>
           <a>
-            <h2 className="title text-base-2xl md:text-3xl mb-2 hover:text-[#1c2e4a] dark:hover:text-[#FDE7C9] transition-colors">
+            <h2 className="title text-base-2xl md:text-3xl mb-2 hover:text-[#143e75] dark:hover:text-[#FDE7C9] transition-colors">
               {story.data.title[0].text}
             </h2>
           </a>
@@ -40,7 +40,7 @@ const LargeStoryCard = ({ story }) => {
           </Link>
 
           <Link href={linkResolver(story.data.author)} passHref>
-            <a className="self-center hover:text-[#1c2e4a] dark:hover:text-[#FDE7C9] transition-colors">
+            <a className="self-center hover:text-[#143e75] dark:hover:text-[#FDE7C9] transition-colors">
               <p>{story.data.author.data.name}</p>
             </a>
           </Link>

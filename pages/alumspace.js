@@ -33,7 +33,7 @@ export default function AlumspacePage({ items }) {
         }
         endMessage={<></>}
       >
-        <div className="max-w-4xl mx-auto px-6 md:px-10 my-6">
+        <div className="max-w-4xl mx-auto px-6 md:px-10 my-6 ">
           {visibleItems.map((item) => (
             <AlumspaceCard key={item.id} item={item} />
           ))}
@@ -58,6 +58,7 @@ export async function getServerSideProps() {
     },
     graphQuery: `{
       alumspace {
+        uid
         title
         alum
         batch

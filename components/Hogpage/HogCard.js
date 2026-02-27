@@ -13,12 +13,12 @@ const HogCard = ({ story }) => {
           />
         </a>
       </Link>
-      <p className="vertical-label mt-1 text-xs text-grey-400 hover:text-[#1c2e4a] transition-colors dark:hover:text-[#FDE7C9]">
+      <p className="vertical-label mt-1 text-xs text-grey-400 hover:text-[#143e75] transition-colors dark:hover:text-[#FDE7C9]">
         {story.data.title[0].text.match(/^\d+/)?.[0]}
       </p>
       <Link href={linkResolver(story)} passHref>
         <a>
-          <h2 className="content-bold text-lg hover:text-[#1c2e4a] transition-colors dark:hover:text-[#FDE7C9]">{story.data.name}</h2>
+          <h2 className="content-bold text-lg hover:text-[#143e75] transition-colors dark:hover:text-[#FDE7C9]">{story.data.name}</h2>
         </a>
       </Link>
     </div>

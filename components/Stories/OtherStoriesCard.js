@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const OtherStoriesCard = ({
   uid,
   title,
@@ -5,7 +7,8 @@ const OtherStoriesCard = ({
   image,
 }) => {
   return (
-    <div className="py-4 md:py-2">
+    <Link href = {`/story/${uid}`}>
+    <a className="py-4 md:py-2 cursor-pointer">
       <h3 className="text-black text-sm md:text-base uppercase content-bold mb-1">
         {categoryInfo.name}
       </h3>
@@ -17,7 +20,8 @@ const OtherStoriesCard = ({
           {title}
         </h2>
       </div>
-    </div>
+    </a>
+    </Link>
   );
 };
 

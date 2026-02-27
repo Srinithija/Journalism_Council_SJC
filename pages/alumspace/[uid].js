@@ -11,7 +11,7 @@ export default function AlumspaceDetail({ page }) {
   if (!page || !page.data) {
     return <div>Not Found</div>;
   }
-  
+
   const title = page.data.title;
   const alum = page.data.alum || "";
   const batch = page.data.batch || "";
@@ -28,15 +28,13 @@ export default function AlumspaceDetail({ page }) {
         {/* Header */}
         <div className="flex flex-col justify-center w-full mx-auto md:max-w-4xl lg:max-w-5xl pt-10 pb-6 px-4">
           <Link href="/alumspace" passHref>
-            <a className="text-base dark:text-white content-bold text-sm uppercase mb-6 hover:text-[#1c2e4a] dark:hover:text-[#FDE7C9] transition-colors hover:underline">
+            <a className="text-base dark:text-white content-bold text-sm uppercase mb-6 hover:text-[#143e75] dark:hover:text-[#FDE7C9] transition-colors hover:underline">
               &larr; Back to AlumSpace
             </a>
           </Link>
-
           <h1 className="title text-center text-base dark:text-white text-3xl md:text-5xl py-1 mb-4">
             <PrismicText field={title} />
           </h1>
-
           {/* Alumni Info */}
           <p className="text-center dark:text-white content-bold text-base md:text-lg mb-1">
             {website ? (
@@ -96,7 +94,7 @@ export default function AlumspaceDetail({ page }) {
         <div className="w-full mx-auto max-w-2xl px-4 pb-10">
           <div className="border-t border-grey-300 pt-6">
             <Link href="/alumspace" passHref>
-              <a className="text-base dark:text-white content-bold text-sm uppercase hover:text-[#1c2e4a] dark:hover:text-[#FDE7C9] transition-colors hover:underline">
+              <a className="text-base dark:text-white content-bold text-sm uppercase hover:text-[#143e75] dark:hover:text-[#FDE7C9] transition-colors hover:underline">
                 &larr; Back to AlumSpace
               </a>
             </Link>

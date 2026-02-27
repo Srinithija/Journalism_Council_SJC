@@ -18,7 +18,7 @@ const HogCard = ({ hog }) => {
             />
           )}
         </div>
-        <h2 className="title text-lg md:text-xl mt-2 hover:text-[#1c2e4a] dark:hover:text-[#FDE7C9] transition-colors">{title}</h2>
+        <h2 className="title text-lg md:text-xl mt-2 hover:text-[#143e75] dark:hover:text-[#FDE7C9] transition-colors">{title}</h2>
       </a>
     </Link>
   );

@@ -17,7 +17,7 @@ export default function HogStory({ page, otherStories }) {
       <article>
         <div className="flex flex-col justify-center text-base dark:text-white w-full mx-auto md:max-w-4xl lg:max-w-5xl mx-auto pt-10 pb-6 px-4">
           <Link href="/humansofgct" passHref>
-            <a className="text-base dark:text-white content-bold text-sm uppercase mb-6 hover:text-[#1c2e4a] transition-colors hover:underline">
+            <a className="text-base dark:text-white content-bold text-sm uppercase mb-6 hover:text-[#143e75] transition-colors hover:underline">
               &larr; Back to Humans of GCT
             </a>
           </Link>
