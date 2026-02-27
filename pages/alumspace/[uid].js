@@ -7,6 +7,11 @@ import Link from "next/link";
 import * as prismicH from "@prismicio/helpers";
 
 export default function AlumspaceDetail({ page }) {
+
+  if (!page || !page.data) {
+    return <div>Not Found</div>;
+  }
+  
   const title = page.data.title;
   const alum = page.data.alum || "";
   const batch = page.data.batch || "";
@@ -15,6 +20,7 @@ export default function AlumspaceDetail({ page }) {
   // Handle both string and Link type fields
   const websiteRaw = page.data.website;
   const website = websiteRaw?.url || (typeof websiteRaw === "string" && websiteRaw) || null;
+  
 
   return (
     <div className="bg-white dark:bg-grey-800">
@@ -115,6 +121,7 @@ export async function getStaticProps({ params }) {
       props: {
         page,
       },
+      revalidate: 60,
     };
   } catch (error) {
     console.error("Error in getStaticProps:", error);
@@ -136,13 +143,13 @@ export async function getStaticPaths() {
             uid: item.uid,
           },
         })),
-      fallback: true,
+      fallback: false,
     };
   } catch (error) {
     console.error("Error in getStaticPaths:", error);
     return {
       paths: [],
-      fallback: true,
+      fallback: false,
     };
   }
 }
