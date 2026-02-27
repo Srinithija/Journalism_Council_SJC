@@ -8,6 +8,10 @@ import { components } from "../../slices";
 import Link from "next/link";
 
 export default function HogStory({ page, otherStories }) {
+  if(!page || !page.data){
+    return <div>Not Found</div>
+  }
+  otherStories = otherStories|| [];
   return (
     <div className="bg-white dark:bg-grey-800 grid-col-1 align-center justify-center px-2 py-1">
       <article>
@@ -100,6 +104,7 @@ export async function getStaticProps({ params }) {
       page,
       otherStories: otherStories.results,
     },
+    revalidate: 60,
   };
 }
 
@@ -115,13 +120,13 @@ export async function getStaticPaths() {
             uid: item.uid,
           },
         })),
-      fallback: true,
+      fallback: false,
     };
   } catch (error) {
     console.error("Error in getStaticPaths:", error);
     return {
       paths: [],
-      fallback: true,
+      fallback: false,
     };
   }
 }

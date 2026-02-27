@@ -3,6 +3,10 @@ import { PrismicText } from "@prismicio/react";
 import Link from "next/link";
 
 export default function ApertureDetail({ page }) {
+
+  if (!page || !page.data){
+    return <div> Not Found</div>
+  }
   const title = page.data.title;
   const description = page.data.description || "";
   const date = page.data.date || "";
@@ -69,6 +73,7 @@ export async function getStaticProps({ params }) {
     props: {
       page,
     },
+    revalidate: 60,
   };
 }
 
@@ -84,13 +89,13 @@ export async function getStaticPaths() {
             uid: item.uid,
           },
         })),
-      fallback: true,
+      fallback: false,
     };
   } catch (error) {
     console.error("Error in getStaticPaths for aperture:", error);
     return {
       paths: [],
-      fallback: true,
+      fallback: false,
     };
   }
 }
